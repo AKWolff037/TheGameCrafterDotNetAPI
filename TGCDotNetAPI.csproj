@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73CC8306-4F59-4F87-9EA8-613E9289F3AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGCDotNetAPI</RootNamespace>
+    <AssemblyName>TGCDotNetAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base Classes\TGCErrorResponse.cs" />
+    <Compile Include="Base Classes\TGCObjectBase.cs" />
+    <Compile Include="Base Classes\TGCParameter.cs" />
+    <Compile Include="Base Classes\TGCResultResponse.cs" />
+    <Compile Include="Base Classes\TGCTestObject.cs" />
+    <Compile Include="Base Classes\TGCWarningResponse.cs" />
+    <Compile Include="Base Classes\TGCWebResponse.cs" />
+    <Compile Include="Interfaces\ISerializable.cs" />
+    <Compile Include="Interfaces\ITGCObject.cs" />
+    <Compile Include="Interfaces\ITGCWebRequest.cs" />
+    <Compile Include="Interfaces\ITGCWebResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base Classes\TGCWebRequest.cs" />
+    <Compile Include="TGCObjects\TGCDesigner.cs" />
+    <Compile Include="TGCObjects\TGCFile.cs" />
+    <Compile Include="TGCObjects\TGCFolder.cs" />
+    <Compile Include="TGCObjects\TGCGame.cs" />
+    <Compile Include="TGCObjects\TGCGamePart.cs" />
+    <Compile Include="TGCObjects\TGCPart.cs" />
+    <Compile Include="TGCObjects\TGCReview.cs" />
+    <Compile Include="TGCObjects\TGCSession.cs" />
+    <Compile Include="TGCObjects\TGCUser.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
